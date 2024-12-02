@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="nav-items">
             <ul>
+            <li>
+                <span><a href="https://bikal3.github.io/Portfolio/">Home</a></span>
+              </li>
               <li>
                 <span><a href="about.html">About</a></span>
               </li>
