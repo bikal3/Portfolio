@@ -20,7 +20,10 @@ export default function Navbar() {
   const isHome = pathname === '/'
 
   useEffect(() => {
-    if (!isHome) return
+    if (!isHome) {
+      setActive(null)
+      return
+    }
 
     const observers: IntersectionObserver[] = []
 
