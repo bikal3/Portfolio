@@ -19,8 +19,8 @@ html {
 }
 
 body {
-  background-color: #0f0f0f;
-  color: #cccccc;
+  background-color: var(--color-bg);
+  color: var(--color-text-body);
 }
 
 /* Blog prose: teal left border on code blocks */
