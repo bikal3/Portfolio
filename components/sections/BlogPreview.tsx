@@ -11,12 +11,14 @@ export default async function BlogPreview() {
     <section id="blog-preview" className="py-12">
       <div className="flex justify-between items-center mb-4">
         <SectionLabel>Latest Posts</SectionLabel>
-        <Link
-          href="/blog"
-          className="text-xs text-accent hover:underline"
-        >
-          View all →
-        </Link>
+        {latest.length > 0 && (
+          <Link
+            href="/blog"
+            className="text-xs text-accent hover:underline"
+          >
+            View all →
+          </Link>
+        )}
       </div>
 
       {latest.length === 0 ? (
