@@ -37,7 +37,7 @@ export default async function BlogPreview() {
                 {post.title}
               </p>
               <p className="text-text-faint text-[10px] mt-1">
-                {new Date(post.date).toLocaleDateString('en-US', {
+                {new Date(post.date + 'T00:00:00').toLocaleDateString('en-US', {
                   month: 'long',
                   year: 'numeric',
                 })}{' '}
