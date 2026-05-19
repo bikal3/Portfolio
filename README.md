@@ -1,26 +1,42 @@
-## Portfolio
+# Bikal Shrestha — Portfolio
 
-##### Optimized For Github Pages
+Personal portfolio site built with Next.js, Tailwind CSS v4, and MDX.
 
-<img src="https://github.com/bikal3/Portfolio/blob/master/screenshots/1.png?raw=false">
+**Live:** [bikal3.github.io/Portfolio](https://bikal3.github.io/Portfolio)
 
-<pre>P.S. This project is still in development phase.</pre>
-<pre><a href="https://bikal3.github.io/resume/">VIEW LIVE DEMO</a></pre>
+## Stack
 
-### TECHNOLOGIES USED
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Blog:** MDX via next-mdx-remote
+- **Language:** TypeScript
+- **Testing:** Jest + React Testing Library
 
-- HTML5
-- CSS
-- JAVASCRIPT
-- BOOTSTRAP
-- FONT AWESOME 5
+## Features
 
-### Just a sidenote ✉
+- Side navigation with profile photo, social links, and active section tracking
+- Projects section with live demo and GitHub links
+- Education and experience timeline
+- MDX-powered blog with reading time
+- Fully static output — no server required
 
-I value keeping this site open source, but as you all know, plagiarism is bad. I spent a non-negligible amount of effort developing, designing, and trying to perfect this iteration of my website, and I am proud of it! All I ask is to not claim this effort as your own.
+## Projects Featured
 
-So, feel free to fork this repo. If you do, please just give me proper credit by linking back to my website.
+- [Dual-Branch U-Net for Precipitation Downscaling](https://github.com/bikal3/dual-branch-unet-precip)
+- [California Wildfire Analysis Dashboard](https://github.com/bikal3/mtbs_wildfires)
+- [Nepal GLOF Explorer](https://github.com/bikal3/himalaya-glof)
 
-##### Made with ❤ by <a href="https://github.com/bikal3">BikalShrestha</a>
+## Local Development
 
-[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://github.com/bikal3)
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Contact
+
+- Email: bikal3.bs@gmail.com
+- GitHub: [github.com/bikal3](https://github.com/bikal3)
+- LinkedIn: [linkedin.com/in/shresthabikal](https://linkedin.com/in/shresthabikal/)
