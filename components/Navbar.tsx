@@ -70,34 +70,35 @@ export default function Navbar() {
   return (
     <nav className="w-52 shrink-0 sticky top-0 self-start h-screen z-50 bg-bg border-r border-[#1f1f1f] flex flex-col px-5 py-8 gap-6">
       {/* Profile */}
-      <Link href="/" className="flex flex-col gap-3 group">
-        <Image
-          src={profileImg}
-          alt="Bikal Shrestha"
-          width={160}
-          height={160}
-          className="rounded-xl object-cover border-2 border-border-strong group-hover:border-accent transition-colors w-full aspect-square"
-          priority
-        />
-        <div>
-          <p className="font-bold text-white text-sm leading-snug group-hover:text-accent transition-colors">
-            Bikal Shrestha
-          </p>
-          <p className="text-[11px] text-text-muted mt-1 leading-snug">
-            Spatial Data Analyst · Data Scientist
-          </p>
-          <a
-            href="mailto:bikal3.bs@gmail.com"
-            className="flex items-center gap-1 mt-1 text-[11px] text-text-faint hover:text-accent transition-colors"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-3 h-3 shrink-0">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0-9.75 6.75L2.25 6.75" />
-            </svg>
-            bikal3.bs@gmail.com
-          </a>
-        </div>
-      </Link>
+      <div className="flex flex-col gap-3">
+        <Link href="/" className="flex flex-col gap-3 group">
+          <Image
+            src={profileImg}
+            alt="Bikal Shrestha"
+            width={160}
+            height={160}
+            className="rounded-xl object-cover border-2 border-border-strong group-hover:border-accent transition-colors w-full aspect-square"
+            priority
+          />
+          <div>
+            <p className="font-bold text-white text-sm leading-snug group-hover:text-accent transition-colors">
+              Bikal Shrestha
+            </p>
+            <p className="text-[11px] text-text-muted mt-1 leading-snug">
+              Spatial Data Analyst · Data Scientist
+            </p>
+          </div>
+        </Link>
+        <a
+          href="mailto:bikal3.bs@gmail.com"
+          className="flex items-center gap-1 text-[11px] text-text-faint hover:text-accent transition-colors"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-3 h-3 shrink-0">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0-9.75 6.75L2.25 6.75" />
+          </svg>
+          bikal3.bs@gmail.com
+        </a>
+      </div>
 
       {/* Social links */}
       <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-2">
@@ -116,14 +117,16 @@ export default function Navbar() {
       </div>
 
       {/* Nav links */}
-      <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-3">
+      <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-1">
         {NAV_ITEMS.map(({ id, label }) =>
           isHome ? (
             <a
               key={id}
               href={`#${id}`}
-              className={`text-xs transition-colors ${
-                active === id ? 'text-accent' : 'text-text-muted hover:text-white'
+              className={`text-xs px-3 py-2 rounded-md transition-all ${
+                active === id
+                  ? 'text-accent bg-accent-bg'
+                  : 'text-text-muted hover:text-white hover:bg-surface'
               }`}
             >
               {label}
@@ -132,7 +135,7 @@ export default function Navbar() {
             <Link
               key={id}
               href={`/#${id}`}
-              className="text-xs text-text-muted hover:text-white transition-colors"
+              className="text-xs px-3 py-2 rounded-md text-text-muted hover:text-white hover:bg-surface transition-all"
             >
               {label}
             </Link>
