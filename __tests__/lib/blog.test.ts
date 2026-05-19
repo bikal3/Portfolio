@@ -19,6 +19,7 @@ describe('getAllPosts', () => {
   beforeEach(() => {
     jest.clearAllMocks()
     mockReadingTime.mockReturnValue(fakeStats)
+    mockExistsSync.mockReturnValue(true)
   })
 
   it('returns posts sorted by date descending', async () => {
