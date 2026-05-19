@@ -38,11 +38,12 @@ export async function getAllPosts(): Promise<PostMeta[]> {
   })
 
   return posts.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date + 'T00:00:00').getTime() - new Date(a.date + 'T00:00:00').getTime()
   )
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
+  if (slug.includes('/') || slug.includes('..') || slug.includes('\0')) return null
   const filepath = path.join(BLOG_DIR, `${slug}.mdx`)
 
   if (!fs.existsSync(filepath)) return null
