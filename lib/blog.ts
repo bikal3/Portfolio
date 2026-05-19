@@ -19,6 +19,7 @@ export interface Post extends PostMeta {
 }
 
 export async function getAllPosts(): Promise<PostMeta[]> {
+  if (!fs.existsSync(BLOG_DIR)) return []
   const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith('.mdx'))
 
   const posts = files.map((filename) => {
