@@ -7,7 +7,7 @@ import Navbar from '@/components/Navbar'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
 export const metadata: Metadata = {
-  title: 'Bikal Adhikari',
+  title: 'Bikal Shrestha',
   description: 'Researcher in Geography Information Science at Clark University.',
 }
 
@@ -19,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-bg text-text-body antialiased">
-        <Navbar />
-        <main className="max-w-3xl mx-auto px-6 py-12">{children}</main>
+        <div className="max-w-5xl mx-auto flex min-h-screen">
+          <Navbar />
+          <main className="flex-1 py-12 px-10 min-w-0">{children}</main>
+        </div>
       </body>
     </html>
   )

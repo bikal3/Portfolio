@@ -4,7 +4,8 @@ export interface Project {
   title: string
   description: string
   technologies: string[]
-  link?: string
+  github?: string
+  demo?: string
   image?: string
 }
 
@@ -23,49 +24,46 @@ export interface Experience {
 
 export const projects: Project[] = [
   {
-    title: 'Spatial Analysis of Building Density Across Rwanda',
+    title: 'Dual-Branch U-Net for Precipitation Downscaling',
     description:
-      'Visualizes building coverage percentage across administrative zones in Rwanda using a color gradient from low to high density. Useful for urban planning, resource allocation, and understanding regional population distribution.',
-    technologies: ['Python', 'Dask-GeoPandas', 'AWS S3', 'Source Cooperative'],
-    image: '/img/rwanda.png',
+      'Enhances NASA IMERG precipitation estimates from 10 km to 250 m resolution over Hawaii using a dual-branch CNN that fuses satellite imagery with topographic data. Enables finer-grained rainfall mapping for hydrological and climate applications.',
+    technologies: ['PyTorch', 'Python', 'NASA IMERG', 'Google Earth Engine', 'Jupyter', 'DEM'],
+    github: 'https://github.com/bikal3/dual-branch-unet-precip',
+    demo: 'https://bikal3.github.io/dual-branch-unet-precip/',
   },
   {
-    title: 'Burn Severity Map of Oakbar, California',
+    title: 'California Wildfire Analysis Dashboard',
     description:
-      'Maps wildfire impact on a forested area using five burn severity classes derived from LANDSAT-8 imagery. A critical tool for post-fire recovery planning and reforestation efforts.',
-    technologies: ['Google Earth Engine', 'LANDSAT-8', 'NDVI', 'EVI'],
-    image: '/img/burn_severity.png',
+      'Interactive dashboard covering 38 years (1984–2022) of California wildfire history derived from MTBS satellite imagery and climate records. Enables exploration of burn extent, severity trends, and climate correlations across the state.',
+    technologies: ['Streamlit', 'Plotly', 'Folium', 'Pandas', 'Python', 'MTBS/USGS', 'Docker'],
+    github: 'https://github.com/bikal3/mtbs_wildfires',
+    demo: 'https://california-wildfires-analysis.streamlit.app/',
   },
   {
-    title: 'ATL Flight Delay Analysis',
+    title: 'Nepal GLOF Explorer',
     description:
-      'Reveals that 25% of airlines cause 80% of delays at Atlanta Airport, with Carrier Delays as the dominant factor. Estimates an average delay of ~9 minutes and highlights key patterns in air traffic punctuality.',
-    technologies: ['Tableau', 'Tableau Prep', 'Excel'],
-    image: '/img/tableau.png',
-  },
-  {
-    title: 'GPS Technology on Public Transportation',
-    description:
-      'Research and implementation of GPS technology for public transportation in Nepal, addressing infrastructure challenges including inconsistent network coverage and limited technological literacy among stakeholders.',
-    technologies: ['Node.js', 'Arduino', 'Oracle', 'Java', 'IoT'],
+      'Maps glacial lake outburst flood (GLOF) hazard across the Nepal Himalaya, tracking 25 glacial lakes from 2000 to 2024. Combines ML-based risk classification with satellite change detection to support early warning and disaster preparedness.',
+    technologies: ['Streamlit', 'scikit-learn', 'Google Earth Engine', 'Folium', 'Sentinel-2', 'Landsat', 'Python'],
+    github: 'https://github.com/bikal3/himalaya-glof',
+    demo: 'https://himalaya-glof.streamlit.app/',
   },
 ]
 
 export const education: Education[] = [
   {
-    degree: 'MS in Geography Information Science',
+    degree: 'MS in Geographic Information Science',
     institution: 'Clark University',
     dates: 'Aug 2024 – May 2026',
   },
   {
     degree: 'MS in Data Analytics',
     institution: 'Clark University',
-    dates: 'Jan 2020 – Dec 2023',
+    dates: '2021 – 2023',
   },
   {
-    degree: 'BSc in Geography Information Science',
-    institution: 'Softwarica College of IT and E-commerce',
-    dates: 'July 2016 – Aug 2020',
+    degree: 'BSc in Computing',
+    institution: 'Coventry University',
+    dates: '2016 – 2019',
   },
 ]
 
