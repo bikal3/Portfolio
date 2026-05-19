@@ -4,6 +4,10 @@
 # Superpowers brainstorm sessions
 .superpowers/
 
+# AI assistant config
+AGENTS.md
+CLAUDE.md
+
 # Next.js
 .next/
 out/
