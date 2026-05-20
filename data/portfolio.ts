@@ -40,6 +40,14 @@ export const projects: Project[] = [
     demo: 'https://california-wildfires-analysis.streamlit.app/',
   },
   {
+    title: 'MappingAfrica — Satellite Agricultural Field Segmentation',
+    description:
+      'Implements semantic segmentation of farmland across Zambia using a UNet architecture trained on multi-spectral satellite imagery. Achieves 81.79% pixel accuracy and 43.31% mIoU on the MappingAfrica v2.0.0 dataset. Includes an interactive demo for running inference in the browser.',
+    technologies: ['PyTorch', 'UNet', 'FastAPI', 'React', 'Vite', 'rasterio', 'NumPy'],
+    github: 'https://github.com/bikal3/mappingafrica-unet',
+    demo: 'https://bikal3.github.io/mappingafrica-unet/',
+  },
+  {
     title: 'Nepal GLOF Explorer',
     description:
       'Maps glacial lake outburst flood (GLOF) hazard across the Nepal Himalaya, tracking 25 glacial lakes from 2000 to 2024. Combines ML-based risk classification with satellite change detection to support early warning and disaster preparedness.',
