@@ -40,6 +40,14 @@ export const projects: Project[] = [
     demo: 'https://california-wildfires-analysis.streamlit.app/',
   },
   {
+    title: 'Hisab — Personal Finance Tracker for Nepal',
+    description:
+      'Self-hosted personal finance app tailored for Nepal. Tracks income and expenses, manages bank and wallet ledgers, monitors NEPSE stock portfolios with live pricing, and supports savings goals and monthly budgets. Includes Nepal-specific features: lakh-based formatting, UTC+5:45 timezone, and NEPSE market calendar integration.',
+    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'NextAuth.js', 'Material-UI', 'Recharts', 'Docker'],
+    github: 'https://github.com/bikal3/hisab-demo',
+    demo: 'https://hisab-demo.vercel.app',
+  },
+  {
     title: 'MappingAfrica — Satellite Agricultural Field Segmentation',
     description:
       'Implements semantic segmentation of farmland across Zambia using a UNet architecture trained on multi-spectral satellite imagery. Achieves 81.79% pixel accuracy and 43.31% mIoU on the MappingAfrica v2.0.0 dataset. Includes an interactive demo for running inference in the browser.',
