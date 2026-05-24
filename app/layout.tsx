@@ -21,7 +21,7 @@ export default function RootLayout({
       <body className="bg-bg text-text-body antialiased">
         <div className="max-w-5xl mx-auto flex min-h-screen">
           <Navbar />
-          <main className="flex-1 py-12 px-10 min-w-0">{children}</main>
+          <main className="flex-1 pt-20 pb-12 px-5 md:pt-12 md:px-10 min-w-0">{children}</main>
         </div>
       </body>
     </html>
