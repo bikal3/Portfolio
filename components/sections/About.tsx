@@ -29,7 +29,7 @@ export default function About() {
           I&rsquo;m Bikal Shrestha, a spatial data analyst and data scientist with
           dual master&rsquo;s degrees in Geographic Information Science and Data
           Analytics from Clark University. My research sits at the intersection
-          of machine learning, remote sensing, and environmental science —
+          of deep learning, machine learning, remote sensing, and environmental science —
           using satellite data to study the systems that shape our planet.
         </p>
         <p>
