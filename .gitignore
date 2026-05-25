@@ -8,6 +8,9 @@
 AGENTS.md
 CLAUDE.md
 
+# Tests
+__tests__/
+
 # Next.js
 .next/
 out/

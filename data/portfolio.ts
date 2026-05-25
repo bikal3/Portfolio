@@ -40,6 +40,14 @@ export const projects: Project[] = [
     demo: 'https://california-wildfires-analysis.streamlit.app/',
   },
   {
+    title: 'Mapping Invasive Species — Hadwen Arboretum',
+    description:
+      'Interactive web app presenting a GIS-based survey of invasive plants across 26 acres of the Hadwen Arboretum in Worcester, MA. Reveals that 42.6% of the arboretum contains at least one invasive species, with five-chapter narrative storytelling, species density maps, a threat index, and a management effort estimator.',
+    technologies: ['Python', 'Flask', 'Chart.js', 'Jupyter', 'pandas', 'GIS', 'JavaScript'],
+    github: 'https://github.com/bikal3/arboretum-invasive-species',
+    demo: 'https://arboretum-invasive-species.onrender.com',
+  },
+  {
     title: 'Hisab — Personal Finance Tracker for Nepal',
     description:
       'Self-hosted personal finance app tailored for Nepal. Tracks income and expenses, manages bank and wallet ledgers, monitors NEPSE stock portfolios with live pricing, and supports savings goals and monthly budgets. Includes Nepal-specific features: lakh-based formatting, UTC+5:45 timezone, and NEPSE market calendar integration.',
