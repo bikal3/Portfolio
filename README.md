@@ -2,7 +2,7 @@
 
 Personal portfolio site built with Next.js, Tailwind CSS v4, and MDX.
 
-**Live:** [bikal3.github.io/Portfolio](https://bikal3.github.io/Portfolio)
+**Live:** [bikal3.com.np](https://bikal3.com.np)
 
 ## Stack
 
