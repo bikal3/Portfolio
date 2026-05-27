@@ -40,6 +40,14 @@ export const projects: Project[] = [
     demo: 'https://california-wildfires-analysis.streamlit.app/',
   },
   {
+    title: 'Peru Wildfire Dashboard',
+    description:
+      'Interactive dashboard visualizing 24 years (2000–2024) of wildfire activity across Peru using 32,000+ NASA FIRMS hotspots and MODIS burned area data. Features layer toggles for protected areas and indigenous territories, temporal trend analysis, regional fire rankings, and land governance breakdowns.',
+    technologies: ['Next.js', 'MapLibre GL', 'Recharts', 'Python', 'GeoPandas', 'scikit-learn', 'NASA FIRMS', 'MODIS'],
+    github: 'https://github.com/bikal3/peru-wildfire',
+    demo: 'https://bikal3.github.io/peru-wildfire/',
+  },
+  {
     title: 'Mapping Invasive Species — Hadwen Arboretum',
     description:
       'Interactive web app presenting a GIS-based survey of invasive plants across 26 acres of the Hadwen Arboretum in Worcester, MA. Reveals that 42.6% of the arboretum contains at least one invasive species, with five-chapter narrative storytelling, species density maps, a threat index, and a management effort estimator.',
