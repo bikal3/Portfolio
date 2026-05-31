@@ -4,23 +4,27 @@ import SectionLabel from '@/components/ui/SectionLabel'
 const SKILLS = [
   {
     label: 'Languages',
-    items: ['Python', 'R', 'SQL', 'JavaScript / Node.js', 'Dart / Flutter'],
-  },
-  {
-    label: 'ML & Data Science',
-    items: ['PyTorch', 'scikit-learn', 'Pandas', 'NumPy', 'Streamlit', 'Plotly', 'Tableau'],
+    items: ['Python', 'R', 'SQL', 'JavaScript', 'Node.js'],
   },
   {
     label: 'Deep Learning',
-    items: ['UNet', 'CNN', 'Transfer Learning', 'Semantic Segmentation', 'Random Forest', 'DBSCAN', 'Model Evaluation'],
+    items: ['PyTorch', 'UNet', 'CNN', 'Transfer Learning', 'Semantic Segmentation'],
+  },
+  {
+    label: 'Machine Learning',
+    items: ['scikit-learn', 'Random Forest', 'DBSCAN', 'Clustering', 'Regression', 'Model Evaluation'],
+  },
+  {
+    label: 'Data & Visualization',
+    items: ['Pandas', 'NumPy', 'Streamlit', 'Plotly', 'Tableau', 'Chart.js', 'Recharts'],
   },
   {
     label: 'GIS & Remote Sensing',
-    items: ['Google Earth Engine', 'QGIS', 'ArcGIS', 'TerrSet', 'Sentinel-2', 'Landsat', 'NASA IMERG', 'GDAL'],
+    items: ['Google Earth Engine', 'QGIS', 'ArcGIS', 'TerrSet', 'Sentinel-2', 'Landsat', 'NASA IMERG', 'GDAL', 'MapLibre GL'],
   },
   {
-    label: 'Topics',
-    items: ['Spatial Analysis', 'Deep Learning', 'Climate Modeling', 'Data Visualization'],
+    label: 'Research Areas',
+    items: ['Climate Modeling', 'Hazard Mapping', 'Wildfire Analysis', 'Precipitation Downscaling', 'Land Cover Classification'],
   },
 ]
 
