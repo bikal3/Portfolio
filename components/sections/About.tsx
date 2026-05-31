@@ -11,6 +11,10 @@ const SKILLS = [
     items: ['PyTorch', 'scikit-learn', 'Pandas', 'NumPy', 'Streamlit', 'Plotly', 'Tableau'],
   },
   {
+    label: 'Deep Learning',
+    items: ['UNet', 'CNN', 'Transfer Learning', 'Semantic Segmentation', 'Random Forest', 'DBSCAN', 'Model Evaluation'],
+  },
+  {
     label: 'GIS & Remote Sensing',
     items: ['Google Earth Engine', 'QGIS', 'ArcGIS', 'TerrSet', 'Sentinel-2', 'Landsat', 'NASA IMERG', 'GDAL'],
   },
