@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
+import BackToTop from '@/components/BackToTop'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <div className="max-w-5xl mx-auto flex min-h-screen">
           <Navbar />
           <main className="flex-1 pt-20 pb-12 px-5 md:pt-12 md:px-10 min-w-0">{children}</main>
+          <BackToTop />
         </div>
       </body>
     </html>

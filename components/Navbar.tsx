@@ -65,8 +65,10 @@ export default function Navbar() {
   useEffect(() => { setMenuOpen(false) }, [pathname])
 
   const navLinkClass = (id: NavId) =>
-    `text-xs px-3 py-2 rounded-md transition-all ${
-      active === id ? 'text-accent bg-accent-bg' : 'text-text-muted hover:text-white hover:bg-surface'
+    `text-xs px-3 py-2 rounded-md transition-all border-l-2 ${
+      active === id
+        ? 'text-accent bg-accent-bg border-accent'
+        : 'text-text-muted hover:text-white hover:bg-surface border-transparent'
     }`
 
   const SidebarContent = ({ onNav }: { onNav?: () => void }) => (
@@ -102,6 +104,19 @@ export default function Navbar() {
         </a>
       </div>
 
+      {/* CV button */}
+      <a
+        href="https://bikal3.github.io/resume/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center justify-center gap-2 text-xs font-semibold text-accent border border-accent rounded-md px-3 py-2 hover:bg-accent-bg transition-all"
+      >
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        Download CV
+      </a>
+
       {/* Social links */}
       <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-2">
         {SOCIAL_LINKS.map(({ label, href, icon }) => (
@@ -126,7 +141,7 @@ export default function Navbar() {
               {label}
             </a>
           ) : (
-            <Link key={id} href={`/#${id}`} className="text-xs px-3 py-2 rounded-md text-text-muted hover:text-white hover:bg-surface transition-all" onClick={onNav}>
+            <Link key={id} href={`/#${id}`} className="text-xs px-3 py-2 rounded-md border-l-2 border-transparent text-text-muted hover:text-white hover:bg-surface transition-all" onClick={onNav}>
               {label}
             </Link>
           )

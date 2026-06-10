@@ -19,7 +19,7 @@ export interface Experience {
   role: string
   organization: string
   dates: string
-  description: string
+  bullets: string[]
 }
 
 export const projects: Project[] = [
@@ -104,21 +104,28 @@ export const experience: Experience[] = [
     role: 'Data Analyst / Backend Developer',
     organization: 'Softwarica College of IT and E-commerce',
     dates: 'July 2020 – July 2021',
-    description:
-      'Cleaned millions of records from 250 Moodle database tables using SQL and Tableau Prep. Built executive, marketing, and performance dashboards in Tableau. Designed and developed an Android app and backend APIs using Flutter and Node.js.',
+    bullets: [
+      'Cleaned millions of records across 250 Moodle database tables using SQL and Tableau Prep',
+      'Built executive, marketing, and performance dashboards in Tableau for institutional reporting',
+      'Designed and shipped an Android app and REST APIs using Flutter and Node.js',
+    ],
   },
   {
     role: 'Teaching Assistant',
     organization: 'Softwarica College of IT and E-commerce',
     dates: 'June 2019 – July 2020',
-    description:
-      'Supervised ~40 undergraduate students per semester on research projects. Executed innovative projects including a three-wheel electric car and an online transaction vending machine.',
+    bullets: [
+      'Supervised ~40 undergraduate students per semester on independent research projects',
+      'Mentored teams building hardware/software projects including an electric vehicle prototype',
+    ],
   },
   {
     role: 'Staff Manager',
     organization: 'Hotel Pokhara Peace',
     dates: 'Jan 2017 – Sept 2019',
-    description:
-      'Managed daily operations and staff coordination. Developed an internal web presence using HTML, CSS, and JavaScript.',
+    bullets: [
+      'Managed daily operations and staff coordination across departments',
+      'Developed an internal web presence using HTML, CSS, and JavaScript',
+    ],
   },
 ]
