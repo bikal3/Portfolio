@@ -11,7 +11,6 @@ const NAV_ITEMS = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
   { id: 'education', label: 'Education' },
-  { id: 'blog-preview', label: 'Blog' },
 ] as const
 
 const SOCIAL_LINKS = [
