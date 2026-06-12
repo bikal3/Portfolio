@@ -5,7 +5,7 @@ import { education, experience } from '@/data/portfolio'
 export default function EducationExperience() {
   return (
     <section id="education" className="py-12 border-b border-border-subtle">
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <div className="flex flex-col gap-10">
         {/* Education column */}
         <div>
           <SectionLabel>Education</SectionLabel>
