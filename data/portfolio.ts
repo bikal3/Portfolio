@@ -93,7 +93,7 @@ export const education: Education[] = [
     dates: '2021 – 2023',
   },
   {
-    degree: 'BSc in Computing',
+    degree: 'BSc in Computer Science',
     institution: 'Coventry University',
     dates: '2016 – 2019',
   },
