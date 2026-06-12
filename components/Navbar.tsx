@@ -10,6 +10,7 @@ import profileImg from '@/data/profile.png'
 const NAV_ITEMS = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
+  { id: 'experience', label: 'Experience' },
   { id: 'education', label: 'Education' },
 ] as const
 
