@@ -101,6 +101,14 @@ export const education: Education[] = [
 
 export const experience: Experience[] = [
   {
+    role: 'Senior Lecturer',
+    organization: 'Softwarica College of IT and E-commerce',
+    dates: 'June 2026 – Present',
+    bullets: [
+      "Teaching the Artificial Neural Networks course for master's students",
+    ],
+  },
+  {
     role: 'Data Analyst / Backend Developer',
     organization: 'Softwarica College of IT and E-commerce',
     dates: 'July 2020 – July 2021',
