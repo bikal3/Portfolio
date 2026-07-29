@@ -105,7 +105,6 @@ export const experience: Experience[] = [
     organization: 'Softwarica College of IT and E-commerce',
     dates: 'June 2026 – Present',
     bullets: [
-      "Teaching the Artificial Neural Networks course for master's students",
       'Designed and delivered an 11-module lecture series spanning perceptrons and backpropagation through CNNs, transformers, and deep reinforcement learning',
       'Authored four hands-on PyTorch labs covering MNIST data pipelines, LSTM forecasting, CIFAR-10 image classification, and a Vision Transformer built from scratch',
       "Supervising and assessing individual master's capstone projects applying neural networks to real-world datasets",
