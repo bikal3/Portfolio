@@ -24,6 +24,13 @@ export interface Experience {
 
 export const projects: Project[] = [
   {
+    title: 'BhumiScan — Earth-Embedding Search for Nepal',
+    description:
+      'Country-scale visual search over Nepal’s landscape. Click any location — a glacial lake, a brick kiln, a terraced hillside — and retrieve the most similar places nationwide from 22,676 Clay v1.5 Sentinel-2 embedding cells. Detects 2024→2025 land change and cross-checks it against cloud-penetrating Sentinel-1 radar to strip monsoon false positives. Scores 73.7% macro precision@10 against ESA WorldCover labels, a 5.9× lift over the random baseline, and runs entirely client-side with no backend or vector database.',
+    technologies: ['Next.js', 'TypeScript', 'MapLibre GL', 'Clay v1.5', 'Sentinel-1/2', 'DuckDB', 'Python', 'Cloudflare R2'],
+    demo: 'https://bhumiscan.bikal3.com.np/',
+  },
+  {
     title: 'Dual-Branch U-Net for Precipitation Downscaling',
     description:
       'Enhances NASA IMERG precipitation estimates from 10 km to 250 m resolution over Hawaii using a dual-branch CNN that fuses satellite imagery with topographic data. Enables finer-grained rainfall mapping for hydrological and climate applications.',
