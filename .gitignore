@@ -7,13 +7,12 @@
 # AI assistant config
 AGENTS.md
 CLAUDE.md
-
-# Tests
-__tests__/
+.claude/
 
 # Next.js
 .next/
 out/
+tsconfig.tsbuildinfo
 
 # Node.js
 node_modules/
