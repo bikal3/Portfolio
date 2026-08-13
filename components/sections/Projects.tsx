@@ -19,49 +19,53 @@ export default function Projects() {
   return (
     <section id="projects" className="py-12 border-b border-border-subtle">
       <SectionLabel>Projects</SectionLabel>
-      <div className="flex flex-col gap-4">
-        {projects.map((project) => (
-          <div
-            key={project.title}
-            className="bg-surface border border-border-strong rounded-md p-4 transition-all hover:border-accent hover:bg-[#0d1e2a]"
-          >
-            <h3 className="text-white text-sm font-semibold mb-2">
-              {project.title}
-            </h3>
-            <p className="text-text-muted text-xs leading-relaxed mb-3">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.technologies.map((tech) => (
-                <Badge key={tech} label={tech} />
-              ))}
+      <div className="relative">
+        <div className="scroll-area h-[60vh] min-h-[360px] max-h-[620px] overflow-y-auto overscroll-contain flex flex-col gap-4 pr-3 pb-6">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="bg-surface border border-border-strong rounded-md p-4 shrink-0 transition-all hover:border-accent hover:bg-[#0d1e2a]"
+            >
+              <h3 className="text-white text-sm font-semibold mb-2">
+                {project.title}
+              </h3>
+              <p className="text-text-muted text-xs leading-relaxed mb-3">
+                {project.description}
+              </p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech) => (
+                  <Badge key={tech} label={tech} />
+                ))}
+              </div>
+              <div className="flex gap-3">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-[11px] text-text-muted hover:text-accent transition-colors"
+                  >
+                    <GitHubIcon />
+                    GitHub
+                  </a>
+                )}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-[11px] text-text-muted hover:text-accent transition-colors"
+                  >
+                    <ExternalIcon />
+                    Live Demo
+                  </a>
+                )}
+              </div>
             </div>
-            <div className="flex gap-3">
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-[11px] text-text-muted hover:text-accent transition-colors"
-                >
-                  <GitHubIcon />
-                  GitHub
-                </a>
-              )}
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-[11px] text-text-muted hover:text-accent transition-colors"
-                >
-                  <ExternalIcon />
-                  Live Demo
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {/* Fade hint that the list keeps going */}
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-bg to-transparent" />
       </div>
     </section>
   )
