@@ -74,6 +74,19 @@ section[id] {
   background-color: var(--color-accent);
 }
 
+/*
+ * Mobile drawer open: freeze the page underneath and drop the fixed overlays
+ * that would otherwise float above it (BackToTop sits at z-50, the drawer at
+ * z-40), plus the skip link, which would jump into inert content.
+ */
+body.menu-open {
+  overflow: hidden;
+}
+
+body.menu-open [data-hide-when-menu-open] {
+  display: none;
+}
+
 /* The scroll area is keyboard-focusable, so give it a visible focus ring. */
 .scroll-area:focus-visible {
   outline: 2px solid var(--color-accent);

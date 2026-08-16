@@ -179,18 +179,22 @@ export default function Navbar() {
     toggleRef.current?.focus()
   }, [])
 
-  // While the drawer covers the viewport, don't let the page scroll behind it.
-  // Escape closes it and returns focus to the button that opened it.
+  // While the drawer covers the viewport the page behind it must not scroll,
+  // and must not stay tabbable — otherwise Tab walks into content the user
+  // cannot see. `inert` takes it out of both the tab order and the a11y tree.
+  // Escape closes the drawer and returns focus to the button that opened it.
   useEffect(() => {
     if (!menuOpen) return
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const covered = document.getElementById('main-content')
+    document.body.classList.add('menu-open')
+    covered?.setAttribute('inert', '')
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') closeMenu()
     }
     document.addEventListener('keydown', onKeyDown)
     return () => {
-      document.body.style.overflow = previousOverflow
+      document.body.classList.remove('menu-open')
+      covered?.removeAttribute('inert')
       document.removeEventListener('keydown', onKeyDown)
     }
   }, [menuOpen, closeMenu])

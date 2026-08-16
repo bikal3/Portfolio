@@ -79,6 +79,7 @@ export default function RootLayout({
         />
         <a
           href="#main-content"
+          data-hide-when-menu-open
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-60 focus:rounded-md focus:border focus:border-accent focus:bg-surface focus:px-4 focus:py-2 focus:text-xs focus:text-accent"
         >
           Skip to content
