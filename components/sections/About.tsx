@@ -30,8 +30,8 @@ const SKILLS = [
 
 export default function About() {
   return (
-    <section id="about" className="py-12 border-b border-border-subtle">
-      <SectionLabel>About</SectionLabel>
+    <section id="about" aria-labelledby="about-heading" className="py-12 border-b border-border-subtle">
+      <SectionLabel id="about-heading">About</SectionLabel>
       <div className="space-y-4 text-sm text-text-body leading-relaxed mb-10">
         <p>
           I&rsquo;m Bikal Shrestha, a spatial data analyst and data scientist with

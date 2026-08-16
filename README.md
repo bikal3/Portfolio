@@ -9,7 +9,6 @@ Personal portfolio site built with Next.js, Tailwind CSS v4, and TypeScript.
 - **Framework:** Next.js 16 (App Router, static export)
 - **Styling:** Tailwind CSS v4
 - **Language:** TypeScript
-- **Content:** MDX blog posts via `next-mdx-remote`
 - **Deployment:** GitHub Pages + Cloudflare DNS
 
 ## Features
@@ -18,10 +17,10 @@ Personal portfolio site built with Next.js, Tailwind CSS v4, and TypeScript.
 - Mobile responsive with hamburger drawer
 - Projects section as a fixed-height scroll area, so the list stays compact as it grows
 - Experience and education sections
-- MDX blog with reading-time estimates
 - CV download button
 - Custom 404 page
-- Open Graph / Twitter card meta tags
+- Open Graph / Twitter card meta tags, generated `sitemap.xml` and `robots.txt`
+- `Person` JSON-LD structured data
 - Fully static output — no server required
 
 ## Development
@@ -41,11 +40,15 @@ published artifact, not from the repo root.
 
 | Path | Contents |
 |------|----------|
-| `app/` | App Router pages, root layout, and global styles |
+| `app/` | App Router pages, root layout, global styles, and the OG card |
 | `components/sections/` | Homepage sections (About, Projects, Education & Experience) |
 | `data/portfolio.ts` | Projects, education, and experience — edit content here |
-| `content/blog/` | Blog posts as MDX |
-| `public/` | CV, OG image, and `CNAME` |
+| `data/profile.webp` | Sidebar profile photo |
+| `public/` | CV and `CNAME` |
+
+The social card lives at `app/opengraph-image.png` (1200×630) with its alt text in
+`app/opengraph-image.alt.txt`. Next reads the file's real dimensions, so the
+`og:image:width`/`height` tags can't drift out of sync with the image.
 
 Project cards render from `data/portfolio.ts`, so adding a project means adding one
 entry to that array — no component changes needed.

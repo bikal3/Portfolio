@@ -17,10 +17,19 @@ const ExternalIcon = () => (
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-12 border-b border-border-subtle">
-      <SectionLabel>Projects</SectionLabel>
+    <section id="projects" aria-labelledby="projects-heading" className="py-12 border-b border-border-subtle">
+      <SectionLabel id="projects-heading">Projects</SectionLabel>
       <div className="relative">
-        <div className="scroll-area h-[60vh] min-h-[360px] max-h-[620px] overflow-y-auto overscroll-contain flex flex-col gap-4 pr-3 pb-6">
+        {/*
+          A scrollable region must be reachable by keyboard (WCAG 2.1.1) and
+          needs an accessible name, so it gets `tabIndex` plus role/label.
+        */}
+        <div
+          role="region"
+          aria-label="Project list"
+          tabIndex={0}
+          className="scroll-area h-[60vh] min-h-[360px] max-h-[620px] overflow-y-auto overscroll-contain flex flex-col gap-4 pr-3 pb-6"
+        >
           {projects.map((project) => (
             <div
               key={project.title}

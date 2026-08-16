@@ -5,12 +5,12 @@ import { education, experience } from '@/data/portfolio'
 export default function EducationExperience() {
   return (
     <>
-      <section id="experience" className="py-12 border-b border-border-subtle">
-        <SectionLabel>Experience</SectionLabel>
+      <section id="experience" aria-labelledby="experience-heading" className="py-12 border-b border-border-subtle">
+        <SectionLabel id="experience-heading">Experience</SectionLabel>
         <div className="flex flex-col gap-5">
           {experience.map((item) => (
             <div key={item.role}>
-              <p className="text-white text-sm font-semibold">{item.role}</p>
+              <h3 className="text-white text-sm font-semibold">{item.role}</h3>
               <p className="text-text-muted text-xs mt-0.5">{item.organization}</p>
               <p className="text-text-faint text-xs mt-0.5 mb-2">{item.dates}</p>
               <ul className="flex flex-col gap-1">
@@ -26,12 +26,12 @@ export default function EducationExperience() {
         </div>
       </section>
 
-      <section id="education" className="py-12">
-        <SectionLabel>Education</SectionLabel>
+      <section id="education" aria-labelledby="education-heading" className="py-12">
+        <SectionLabel id="education-heading">Education</SectionLabel>
         <div className="flex flex-col gap-4">
           {education.map((item) => (
             <div key={item.degree}>
-              <p className="text-white text-sm font-semibold">{item.degree}</p>
+              <h3 className="text-white text-sm font-semibold">{item.degree}</h3>
               <p className="text-text-muted text-xs mt-0.5">{item.institution}</p>
               <p className="text-text-faint text-xs mt-0.5">{item.dates}</p>
             </div>
