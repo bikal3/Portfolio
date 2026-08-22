@@ -84,7 +84,7 @@ export const projects: Project[] = [
       'Maps glacial lake outburst flood (GLOF) hazard across the Nepal Himalaya, tracking 25 glacial lakes from 2000 to 2024. Combines ML-based risk classification with satellite change detection to support early warning and disaster preparedness.',
     technologies: ['Streamlit', 'scikit-learn', 'Google Earth Engine', 'Folium', 'Sentinel-2', 'Landsat', 'Python'],
     github: 'https://github.com/bikal3/himalaya-glof',
-    demo: 'https://himalaya-glof.streamlit.app/',
+    demo: 'https://himalayaglof.bikal3.com.np/',
   },
 ]
 

@@ -64,7 +64,7 @@ entry to that array — no component changes needed.
 | [Mapping Invasive Species — Hadwen Arboretum](https://github.com/bikal3/arboretum-invasive-species) | GIS survey of invasive plants across 26 acres in Worcester, MA, finding 42.6% of the arboretum holds at least one invasive species — with density maps, a threat index, and a management effort estimator | [Live](https://arboretum-invasive-species.onrender.com) |
 | [Hisab — Personal Finance Tracker](https://github.com/bikal3/hisab-demo) | Self-hosted finance app for Nepal with NEPSE stock portfolio tracking, multi-account ledgers, savings goals, and lakh-based formatting | [Live](https://hisab-demo.vercel.app) |
 | [MappingAfrica — Satellite Segmentation](https://github.com/bikal3/mappingafrica-unet) | UNet semantic segmentation of agricultural fields in Zambia using multi-spectral satellite imagery — 81.79% pixel accuracy and 43.31% mIoU on the MappingAfrica v2.0.0 dataset | [Live](https://bikal3.github.io/mappingafrica-unet/) |
-| [Nepal GLOF Explorer](https://github.com/bikal3/himalaya-glof) | ML-powered platform tracking 25 glacial lakes across the Nepal Himalaya (2000–2024) with Random Forest risk classification and satellite change detection | [Live](https://himalaya-glof.streamlit.app/) |
+| [Nepal GLOF Explorer](https://github.com/bikal3/himalaya-glof) | ML-powered platform tracking 25 glacial lakes across the Nepal Himalaya (2000–2024) with Random Forest risk classification and satellite change detection | [Live](https://himalayaglof.bikal3.com.np/) |
 
 ## Contact
 
