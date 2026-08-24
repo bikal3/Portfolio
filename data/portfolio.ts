@@ -44,6 +44,7 @@ export const projects: Project[] = [
       'Interactive dashboard covering 38 years (1984–2022) of California wildfire history derived from MTBS satellite imagery and climate records. Enables exploration of burn extent, severity trends, and climate correlations across the state.',
     technologies: ['Streamlit', 'Plotly', 'Folium', 'Pandas', 'Python', 'MTBS/USGS', 'Docker'],
     github: 'https://github.com/bikal3/mtbs_wildfires',
+    demo: 'https://mtbs-wildfires.bikal3.com.np/',
   },
   {
     title: 'Peru Wildfire Dashboard',
