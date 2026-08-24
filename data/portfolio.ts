@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: 'California Wildfire Analysis Dashboard',
     description:
       'Interactive dashboard covering 38 years (1984–2022) of California wildfire history derived from MTBS satellite imagery and climate records. Enables exploration of burn extent, severity trends, and climate correlations across the state.',
-    technologies: ['Streamlit', 'Plotly', 'Folium', 'Pandas', 'Python', 'MTBS/USGS', 'Docker'],
+    technologies: ['Plotly', 'Leaflet', 'Pandas', 'Python', 'MTBS/USGS', 'Docker'],
     github: 'https://github.com/bikal3/mtbs_wildfires',
     demo: 'https://mtbs-wildfires.bikal3.com.np/',
   },
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     title: 'Nepal GLOF Explorer',
     description:
       'Maps glacial lake outburst flood (GLOF) hazard across the Nepal Himalaya, tracking 25 glacial lakes from 2000 to 2024. Combines ML-based risk classification with satellite change detection to support early warning and disaster preparedness.',
-    technologies: ['Streamlit', 'scikit-learn', 'Google Earth Engine', 'Folium', 'Sentinel-2', 'Landsat', 'Python'],
+    technologies: ['scikit-learn', 'Google Earth Engine', 'Leaflet', 'Sentinel-2', 'Landsat', 'Python'],
     github: 'https://github.com/bikal3/himalaya-glof',
     demo: 'https://himalayaglof.bikal3.com.np/',
   },
