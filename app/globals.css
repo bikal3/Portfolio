@@ -112,3 +112,12 @@ body.menu-open [data-hide-when-menu-open] {
 :root:not([data-theme]) .theme-toggle {
   display: none;
 }
+
+/*
+ * Track is 3rem wide with a 1.25rem thumb inset 0.125rem, so the travel is
+ * 3 - 1.25 - 0.25 = 1.5rem. The reduced-motion block above already flattens
+ * the transition, so the slide respects that for free.
+ */
+:root[data-theme='dark'] .theme-switch-thumb {
+  transform: translateY(-50%) translateX(1.5rem);
+}

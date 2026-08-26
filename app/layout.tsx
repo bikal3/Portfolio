@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import BackToTop from '@/components/BackToTop'
+import ThemeToggle from '@/components/ThemeToggle'
 import Footer from '@/components/Footer'
 import profileImg from '@/data/profile.webp'
 
@@ -120,6 +121,16 @@ export default function RootLayout({
             <Footer />
           </main>
           <BackToTop />
+        </div>
+        {/*
+          Desktop switch. Fixed so it stays reachable while scrolling, but
+          width-capped and centred like the page container so it lands on the
+          content's right edge rather than drifting into the empty margin on a
+          wide screen. The wrapper ignores pointer events so it does not sit
+          over the content it spans.
+        */}
+        <div className="pointer-events-none fixed inset-x-0 top-5 z-50 mx-auto hidden max-w-5xl justify-end px-10 md:flex">
+          <ThemeToggle className="pointer-events-auto block" />
         </div>
       </body>
     </html>

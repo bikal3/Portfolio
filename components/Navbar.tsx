@@ -117,9 +117,6 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
             {label}
           </a>
         ))}
-        <div className="hidden md:block">
-          <ThemeToggle />
-        </div>
       </div>
 
       {/* Nav links */}
@@ -218,7 +215,7 @@ export default function Navbar() {
           </span>
         </Link>
         <div className="flex items-center gap-1">
-          <ThemeToggle />
+          <ThemeToggle className="block" />
           <button
             ref={toggleRef}
             onClick={() => setMenuOpen((o) => !o)}
