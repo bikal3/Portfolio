@@ -1,20 +1,27 @@
 @import "tailwindcss";
 
+/*
+ * One value per token, not one palette per theme: light-dark() picks its
+ * branch from the inherited `color-scheme` below, so nothing here has to be
+ * duplicated under a media query or a .dark selector.
+ */
 @theme {
-  --color-bg: #0f0f0f;
-  --color-surface: #161616;
-  --color-border-subtle: #1a1a1a;
-  --color-border-strong: #222222;
-  --color-text-strong: #ffffff;
-  --color-text-body: #cccccc;
-  --color-text-muted: #888888;
-  --color-text-faint: #666666;
-  --color-accent: #6aafc7;
-  --color-accent-bg: #0d1e2a;
+  --color-bg: light-dark(#ffffff, #0f0f0f);
+  --color-surface: light-dark(#f7f7f7, #161616);
+  --color-border-subtle: light-dark(#ececec, #1a1a1a);
+  --color-border-strong: light-dark(#e0e0e0, #222222);
+  --color-text-strong: light-dark(#111111, #ffffff);
+  --color-text-body: light-dark(#3a3a3a, #cccccc);
+  --color-text-muted: light-dark(#5f5f5f, #888888);
+  --color-text-faint: light-dark(#6e6e6e, #666666);
+  --color-accent: light-dark(#1f6d8c, #6aafc7);
+  --color-accent-bg: light-dark(#e6f1f6, #0d1e2a);
   --font-family-sans: var(--font-inter), sans-serif;
 }
 
 html {
+  /* Follows the OS until a stored choice overrides it on the element. */
+  color-scheme: light dark;
   scroll-behavior: smooth;
 }
 

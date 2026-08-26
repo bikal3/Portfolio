@@ -1,5 +1,5 @@
 // app/layout.tsx
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
@@ -36,6 +36,12 @@ export const metadata: Metadata = {
     title: 'Bikal Shrestha — Spatial Data Analyst & Data Scientist',
     description: DESCRIPTION,
   },
+}
+
+// Tells the UA both palettes are supported, so form controls, scrollbars and
+// the initial paint match the theme instead of defaulting to light.
+export const viewport: Viewport = {
+  colorScheme: 'light dark',
 }
 
 const personJsonLd = {
