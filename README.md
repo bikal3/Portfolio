@@ -19,7 +19,7 @@ Personal portfolio site built with Next.js, Tailwind CSS v4, and TypeScript.
 - Experience and education sections
 - CV download button
 - Custom 404 page
-- Open Graph / Twitter card meta tags, generated `sitemap.xml` and `robots.txt`
+- Open Graph / Twitter card meta tags
 - `Person` JSON-LD structured data
 - Fully static output — no server required
 
