@@ -14,16 +14,12 @@ export default function BackToTop() {
 
   if (!visible) return null
 
-  const scrollToTop = () => {
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)'
-    ).matches
-    window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' })
-  }
-
   return (
     <button
-      onClick={scrollToTop}
+      // No `behavior` on purpose: the default resolves to the CSS
+      // `scroll-behavior`, which globals.css already drops to `auto` under
+      // prefers-reduced-motion.
+      onClick={() => window.scrollTo({ top: 0 })}
       aria-label="Back to top"
       data-hide-when-menu-open
       className="fixed bottom-6 right-6 z-50 md:hidden bg-surface border border-border-strong text-text-muted hover:text-accent hover:border-accent transition-all rounded-full p-2.5 shadow-lg"
