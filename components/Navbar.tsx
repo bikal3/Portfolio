@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import profileImg from '@/data/profile.webp'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const NAV_ITEMS = [
   { id: 'about', label: 'About' },
@@ -116,6 +117,7 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
             {label}
           </a>
         ))}
+        <ThemeToggle />
       </div>
 
       {/* Nav links */}

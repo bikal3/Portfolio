@@ -100,3 +100,15 @@ body.menu-open [data-hide-when-menu-open] {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
 }
+
+/*
+ * The theme toggle ships both its states in the HTML; data-theme on :root
+ * (set before first paint) decides which one is real. Without that attribute
+ * the script never ran, so the button could not work -- hide it and let the
+ * light-dark() tokens keep following the OS on their own.
+ */
+:root[data-theme='dark'] [data-when='light'],
+:root[data-theme='light'] [data-when='dark'],
+:root:not([data-theme]) .theme-toggle {
+  display: none;
+}

@@ -79,6 +79,21 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="bg-bg text-text-body antialiased">
+        {/*
+          Runs synchronously before the body paints, so a stored choice is
+          applied on the first frame instead of flashing the other theme.
+          Sets data-theme unconditionally (the toggle's label and icon read
+          it) but color-scheme only when a choice was actually stored, so
+          with no stored choice the CSS keeps following the OS.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.theme;" +
+              "document.documentElement.dataset.theme=t||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');" +
+              "if(t)document.documentElement.style.colorScheme=t}catch(e){}",
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
