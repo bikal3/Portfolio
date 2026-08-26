@@ -160,18 +160,18 @@ export default function Navbar() {
 
   useEffect(() => {
     if (!isHome) return
-    const observers: IntersectionObserver[] = []
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const hit = entries.find((e) => e.isIntersecting)
+        if (hit) setActiveSection(hit.target.id as NavId)
+      },
+      { rootMargin: '-40% 0px -55% 0px' }
+    )
     NAV_ITEMS.forEach(({ id }) => {
       const el = document.getElementById(id)
-      if (!el) return
-      const observer = new IntersectionObserver(
-        ([entry]) => { if (entry.isIntersecting) setActiveSection(id) },
-        { rootMargin: '-40% 0px -55% 0px' }
-      )
-      observer.observe(el)
-      observers.push(observer)
+      if (el) observer.observe(el)
     })
-    return () => observers.forEach((o) => o.disconnect())
+    return () => observer.disconnect()
   }, [isHome])
 
   const closeMenu = useCallback(() => {
