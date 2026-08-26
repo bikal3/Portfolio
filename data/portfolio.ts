@@ -1,25 +1,14 @@
 // data/portfolio.ts
 
-export interface Project {
+// Only `projects` needs a declared type: without it, TypeScript infers a union
+// where the entries missing `github` make `project.github` unreachable. The
+// other two arrays have no optional fields, so inference is enough.
+interface Project {
   title: string
   description: string
   technologies: string[]
   github?: string
   demo?: string
-  image?: string
-}
-
-export interface Education {
-  degree: string
-  institution: string
-  dates: string
-}
-
-export interface Experience {
-  role: string
-  organization: string
-  dates: string
-  bullets: string[]
 }
 
 export const projects: Project[] = [
@@ -88,7 +77,7 @@ export const projects: Project[] = [
   },
 ]
 
-export const education: Education[] = [
+export const education = [
   {
     degree: 'MS in Geographic Information Science',
     institution: 'Clark University',
@@ -106,7 +95,7 @@ export const education: Education[] = [
   },
 ]
 
-export const experience: Experience[] = [
+export const experience = [
   {
     role: 'Senior Lecturer',
     organization: 'Softwarica College of IT and E-commerce',
