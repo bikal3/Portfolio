@@ -60,7 +60,7 @@ export default function ThemeToggle({ className = '' }: { className?: string }) 
       <span data-when="light" className="sr-only">
         Dark theme
       </span>
-      <span className="theme-switch-thumb absolute top-1/2 left-0.5 flex h-5 w-5 -translate-y-1/2 items-center justify-center rounded-full bg-accent text-bg transition-transform">
+      <span className="theme-switch-thumb absolute top-px left-px flex h-5 w-5 items-center justify-center rounded-full bg-accent text-bg transition-transform">
         <svg data-when="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} aria-hidden="true" className="h-3 w-3">
           <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1.5m0 15V21m9-9h-1.5m-15 0H3m15.364-6.364-1.06 1.06M6.697 17.303l-1.061 1.06m12.728 0-1.06-1.06M6.697 6.697l-1.061-1.06M16.5 12a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z" />
         </svg>

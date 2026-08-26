@@ -114,11 +114,17 @@ body.menu-open [data-hide-when-menu-open] {
 }
 
 /*
- * Thumb rests left in dark and travels right in light. Track is 3rem wide with
- * a 1.25rem thumb inset 0.125rem, so the travel is 3 - 1.25 - 0.25 = 1.5rem.
- * The reduced-motion block above already flattens the transition, so the slide
- * respects that for free.
+ * Thumb rests left in dark and travels right in light.
+ *
+ * X only. Vertical centring is plain `top: 1px` on the thumb, deliberately not
+ * a -translate-y-1/2 utility: Tailwind v4 compiles those to the standalone
+ * `translate` property, which does not override a `transform` here -- the two
+ * compose, so the thumb would take -50% twice and leave the track.
+ *
+ * Track is 3rem wide with 1px borders, so the padding box is 46px; a 20px
+ * thumb inset 1px travels 46 - 20 - 1 - 1 = 24px. The reduced-motion block
+ * above already flattens the transition, so the slide respects that for free.
  */
 :root[data-theme='light'] .theme-switch-thumb {
-  transform: translateY(-50%) translateX(1.5rem);
+  transform: translateX(1.5rem);
 }
