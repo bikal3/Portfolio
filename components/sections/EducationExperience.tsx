@@ -10,7 +10,7 @@ export default function EducationExperience() {
         <div className="flex flex-col gap-5">
           {experience.map((item) => (
             <div key={item.role}>
-              <h3 className="text-white text-sm font-semibold">{item.role}</h3>
+              <h3 className="text-text-strong text-sm font-semibold">{item.role}</h3>
               <p className="text-text-muted text-xs mt-0.5">{item.organization}</p>
               <p className="text-text-faint text-xs mt-0.5 mb-2">{item.dates}</p>
               <ul className="flex flex-col gap-1">
@@ -31,7 +31,7 @@ export default function EducationExperience() {
         <div className="flex flex-col gap-4">
           {education.map((item) => (
             <div key={item.degree}>
-              <h3 className="text-white text-sm font-semibold">{item.degree}</h3>
+              <h3 className="text-text-strong text-sm font-semibold">{item.degree}</h3>
               <p className="text-text-muted text-xs mt-0.5">{item.institution}</p>
               <p className="text-text-faint text-xs mt-0.5">{item.dates}</p>
             </div>

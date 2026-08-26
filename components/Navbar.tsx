@@ -53,7 +53,7 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
     `text-xs px-3 py-2 rounded-md transition-all border-l-2 ${
       active === id
         ? 'text-accent bg-accent-bg border-accent'
-        : 'text-text-muted hover:text-white hover:bg-surface border-transparent'
+        : 'text-text-muted hover:text-text-strong hover:bg-surface border-transparent'
     }`
 
   return (
@@ -71,7 +71,7 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
             priority
           />
           <div>
-            <p className="font-bold text-white text-sm leading-snug group-hover:text-accent transition-colors">
+            <p className="font-bold text-text-strong text-sm leading-snug group-hover:text-accent transition-colors">
               Bikal Shrestha
             </p>
             <p className="text-[11px] text-text-muted mt-1 leading-snug">
@@ -103,7 +103,7 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
       </a>
 
       {/* Social links */}
-      <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-2">
+      <div className="border-t border-border-strong pt-4 flex flex-col gap-2">
         {SOCIAL_LINKS.map(({ label, href, icon }) => (
           <a
             key={label}
@@ -126,7 +126,7 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
         and the trip back from /404 — the latter costs a full reload, which on
         a two-page static export is not worth a second code path.
       */}
-      <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-1">
+      <div className="border-t border-border-strong pt-4 flex flex-col gap-1">
         {NAV_ITEMS.map(({ id, label }) => (
           <a
             key={id}
@@ -198,7 +198,7 @@ export default function Navbar() {
   return (
     <>
       {/* ── Mobile top bar ── */}
-      <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-bg border-b border-[#1f1f1f] flex items-center justify-between px-5 h-14">
+      <header className="md:hidden fixed top-0 left-0 right-0 z-50 bg-bg border-b border-border-strong flex items-center justify-between px-5 h-14">
         <Link href="/" className="flex items-center gap-2.5 group" onClick={() => setMenuOpen(false)}>
           <Image
             src={profileImg}
@@ -209,14 +209,14 @@ export default function Navbar() {
             className="rounded-lg object-cover border border-border-strong"
             priority
           />
-          <span className="font-bold text-white text-sm group-hover:text-accent transition-colors">
+          <span className="font-bold text-text-strong text-sm group-hover:text-accent transition-colors">
             Bikal Shrestha
           </span>
         </Link>
         <button
           ref={toggleRef}
           onClick={() => setMenuOpen((o) => !o)}
-          className="text-text-muted hover:text-white transition-colors p-1"
+          className="text-text-muted hover:text-text-strong transition-colors p-1"
           aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
           aria-controls={menuOpen ? 'mobile-menu' : undefined}
@@ -247,7 +247,7 @@ export default function Navbar() {
       {/* ── Desktop side nav ── */}
       <nav
         aria-label="Main"
-        className="hidden md:flex w-52 shrink-0 sticky top-0 self-start h-screen overflow-y-auto z-50 bg-bg border-r border-[#1f1f1f] flex-col px-5 py-8 gap-6"
+        className="hidden md:flex w-52 shrink-0 sticky top-0 self-start h-screen overflow-y-auto z-50 bg-bg border-r border-border-strong flex-col px-5 py-8 gap-6"
       >
         <SidebarContent active={active} isHome={isHome} />
       </nav>

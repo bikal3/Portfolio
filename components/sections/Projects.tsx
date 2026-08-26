@@ -32,9 +32,9 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-surface border border-border-strong rounded-md p-4 shrink-0 transition-all hover:border-accent hover:bg-[#0d1e2a]"
+              className="bg-surface border border-border-strong rounded-md p-4 shrink-0 transition-all hover:border-accent hover:bg-accent-bg"
             >
-              <h3 className="text-white text-sm font-semibold mb-2">
+              <h3 className="text-text-strong text-sm font-semibold mb-2">
                 {project.title}
               </h3>
               <p className="text-text-muted text-xs leading-relaxed mb-3">
