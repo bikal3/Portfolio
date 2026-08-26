@@ -119,29 +119,25 @@ function SidebarContent({ active, isHome, onNav }: SidebarContentProps) {
       </div>
 
       {/* Nav links */}
+      {/*
+        One branch, not two: off the home page `active` is always null, so
+        navLinkClass already returns the inactive styling and aria-current is
+        already undefined. A plain anchor covers both the same-page hash jump
+        and the trip back from /404 — the latter costs a full reload, which on
+        a two-page static export is not worth a second code path.
+      */}
       <div className="border-t border-[#1f1f1f] pt-4 flex flex-col gap-1">
-        {NAV_ITEMS.map(({ id, label }) =>
-          isHome ? (
-            <a
-              key={id}
-              href={`#${id}`}
-              className={navLinkClass(id)}
-              aria-current={active === id ? 'location' : undefined}
-              onClick={onNav}
-            >
-              {label}
-            </a>
-          ) : (
-            <Link
-              key={id}
-              href={`/#${id}`}
-              className="text-xs px-3 py-2 rounded-md border-l-2 border-transparent text-text-muted hover:text-white hover:bg-surface transition-all"
-              onClick={onNav}
-            >
-              {label}
-            </Link>
-          )
-        )}
+        {NAV_ITEMS.map(({ id, label }) => (
+          <a
+            key={id}
+            href={isHome ? `#${id}` : `/#${id}`}
+            className={navLinkClass(id)}
+            aria-current={active === id ? 'location' : undefined}
+            onClick={onNav}
+          >
+            {label}
+          </a>
+        ))}
       </div>
     </>
   )
