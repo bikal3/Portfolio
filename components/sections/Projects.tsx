@@ -1,6 +1,5 @@
 // components/sections/Projects.tsx
 import SectionLabel from '@/components/ui/SectionLabel'
-import Badge from '@/components/ui/Badge'
 import { projects } from '@/data/portfolio'
 
 const GitHubIcon = () => (
@@ -43,7 +42,12 @@ export default function Projects() {
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
-                  <Badge key={tech} label={tech} />
+                  <span
+                    key={tech}
+                    className="bg-accent-bg text-accent text-[10px] px-2 py-0.5 rounded"
+                  >
+                    {tech}
+                  </span>
                 ))}
               </div>
               <div className="flex gap-3">
