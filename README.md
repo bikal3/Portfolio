@@ -7,12 +7,13 @@ Personal portfolio site built with Next.js, Tailwind CSS v4, and TypeScript.
 ## Stack
 
 - **Framework:** Next.js 16 (App Router, static export)
-- **Styling:** Tailwind CSS v4
+- **Styling:** Tailwind CSS v4, themed with native CSS `light-dark()`
 - **Language:** TypeScript
 - **Deployment:** GitHub Pages + Cloudflare DNS
 
 ## Features
 
+- Light/dark theme toggle: follows the OS by default, remembers an explicit choice
 - Side navigation with profile photo, social links, and active section tracking
 - Mobile responsive with hamburger drawer
 - Projects section as a fixed-height scroll area, so the list stays compact as it grows
