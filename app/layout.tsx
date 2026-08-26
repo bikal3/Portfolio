@@ -76,8 +76,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  // The inline script below sets data-theme and color-scheme on <html> before
+  // React hydrates, so the server HTML deliberately disagrees with the DOM by
+  // then. suppressHydrationWarning covers this element's own attributes only --
+  // it does not reach any child -- which is exactly the disagreement we create.
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body className="bg-bg text-text-body antialiased">
         {/*
           Runs synchronously before the body paints, so a stored choice is
