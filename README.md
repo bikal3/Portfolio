@@ -24,19 +24,6 @@ Personal portfolio site built with Next.js, Tailwind CSS v4, and TypeScript.
 - `Person` JSON-LD structured data
 - Fully static output — no server required
 
-## Development
-
-```bash
-npm install
-npm run dev      # dev server at localhost:3000
-npm run build    # static export to out/
-npm run lint
-```
-
-`npm run build` writes the deployable site to `out/`. The custom domain comes from
-`public/CNAME`, which is copied into that output — GitHub Pages reads it from the
-published artifact, not from the repo root.
-
 ## Project Structure
 
 | Path | Contents |
